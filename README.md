@@ -58,10 +58,35 @@ docker compose -f compose-dev.yaml up
 Make sure to configure environment variables for the backend, either in an `.env` file or in your Docker run command:
 
 ```env
-SPRING_DATASOURCE_URL=jdbc:postgresql://<host>:5432/inventory_db
-SPRING_DATASOURCE_USERNAME=your_db_user
-SPRING_DATASOURCE_PASSWORD=your_db_password
-SPRING_JPA_HIBERNATE_DDL_AUTO=update
+POSTGRES_PASSWORD=database password
+POSTGRES_USER=database user
+POSTGRES_DB=database name
+SERVER_PORT=port to serve the application on
+MAIL_PORT=XXXX
+REDIS_PORT=XXXX
+SPRING_DATASOURCE_URL=spring database server url
+SPRING_DATASOURCE_USERNAME=spring database username
+SPRING_DATASOURCE_PASSWORD=spring database password
+SPRING_JPA_HIBERNATE_DDL_AUTO=<create | create-drop | update | validate | none>
+JAVA_OPTS=-Xms512m -Xmx1024m
+ALLOW_EMPTY_PASSWORD=yes # ALLOW_EMPTY_PASSWORD is recommended only for development.
+REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+ORIGINS=allowed domains
+JWT_SECRET=
+JWT_EXPIRATION=
+RT_EXPIRATION=
+API_KEY=
+API_SECRET=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+SUPPORT_EMAIL=
+SSL_KEY_PASSWORD=
+DATASOURCE_CONNECTION_TIMEOUT=
+DATASOURCE_MAX_POOL_SIZE=
+DATASOURCE_IDLE_TIMEOUT=
+DATASOURCE_MIN_IDLE=
+MAX_FILE_SIZE=
+MAX_REQUEST_SIZE=
 ```
 
 ## ☁️ AWS Deployment
