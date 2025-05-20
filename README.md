@@ -48,16 +48,10 @@ cd backend
 2. Build the Docker image:
 
 ```bash
-docker build -t inventory-backend .
+docker compose -f compose-dev.yaml up
 ```
 
-3. Run the container:
-
-```bash
-docker run -d -p 8080:8080 --name inventory-api inventory-backend
-```
-
-4. The API will be accessible at: [http://localhost:8080](http://localhost:8080)
+3. The API will be accessible at: [https://dev.backend.com/api/v1:8443](https://dev.backend.com/api/v1:8443)
 
 ### Environment Variables
 
